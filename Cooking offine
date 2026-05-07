@@ -1,1231 +1,1049 @@
 {
-"meta": {
-"name": "Chef AI Food Database",
-"version": "2.0",
-"unit_system": "metric"
-},
-
-"recipes": [
-{
-"id": 1,
-"name": "مكرونة بشاميل",
-"ingredients": [
-{ "item": "مكرونة", "amount": 500, "unit": "g" },
-{ "item": "لحم مفروم", "amount": 400, "unit": "g" },
-{ "item": "لبن", "amount": 1, "unit": "L" },
-{ "item": "زبدة", "amount": 50, "unit": "g" },
-{ "item": "دقيق", "amount": 30, "unit": "g" },
-{ "item": "ملح", "amount": 10, "unit": "g" }
-],
-"steps": [
-"سلق المكرونة 10 دقائق",
-"تشويح اللحم المفروم",
-"تحضير البشاميل",
-"الخلط والخبز"
-],
-"tags": ["pasta", "sauce", "protein", "oven"],
-"time_minutes": 60,
-"temperature": 180,
-"difficulty": "medium"
-},
-{
-"id": 2,
-"name": "مكرونة بالجبنة",
-"ingredients": [
-{ "item": "مكرونة", "amount": 400, "unit": "g" },
-{ "item": "موزاريلا", "amount": 200, "unit": "g" },
-{ "item": "كريمة", "amount": 200, "unit": "ml" },
-{ "item": "ملح", "amount": 5, "unit": "g" }
-],
-"steps": [
-"سلق المكرونة",
-"تسخين الكريمة",
-"إذابة الجبنة",
-"الخلط"
-],
-"tags": ["pasta", "cheese", "fast"],
-"time_minutes": 25,
-"temperature": 180,
-"difficulty": "easy"
-},
-{
-"id": 3,
-"name": "اسباجيتي صلصة",
-"ingredients": [
-{ "item": "اسباجيتي", "amount": 400, "unit": "g" },
-{ "item": "صلصة طماطم", "amount": 300, "unit": "g" },
-{ "item": "ثوم", "amount": 10, "unit": "g" },
-{ "item": "زيت", "amount": 20, "unit": "ml" }
-],
-"steps": [
-"سلق الاسباجيتي",
-"تحضير الصلصة",
-"الخلط"
-],
-"tags": ["pasta", "sauce"],
-"time_minutes": 30,
-"temperature": 170,
-"difficulty": "easy"
-},
-{
-"id": 4,
-"name": "لازانيا",
-"ingredients": [
-{ "item": "شرائح لازانيا", "amount": 250, "unit": "g" },
-{ "item": "لحم مفروم", "amount": 500, "unit": "g" },
-{ "item": "صلصة طماطم", "amount": 300, "unit": "g" },
-{ "item": "جبنة", "amount": 200, "unit": "g" }
-],
-"steps": [
-"تحضير اللحم",
-"ترتيب الطبقات",
-"إضافة الجبنة",
-"الخبز"
-],
-"tags": ["pasta", "cheese", "oven"],
-"time_minutes": 70,
-"temperature": 190,
-"difficulty": "hard"
-},
-{
-"id": 5,
-"name": "مكرونة قلم",
-"ingredients": [
-{ "item": "مكرونة قلم", "amount": 400, "unit": "g" },
-{ "item": "صلصة طماطم", "amount": 200, "unit": "g" },
-{ "item": "زيت", "amount": 20, "unit": "ml" }
-],
-"steps": [
-"سلق المكرونة",
-"إضافة الصلصة",
-"الخلط"
-],
-"tags": ["pasta"],
-"time_minutes": 25,
-"temperature": 170,
-"difficulty": "easy"
-},
-{
-"id": 6,
-"name": "شاورما فراخ",
-"ingredients": [
-{ "item": "دجاج", "amount": 1, "unit": "kg" },
-{ "item": "زبادي", "amount": 150, "unit": "g" },
-{ "item": "ثوم", "amount": 20, "unit": "g" },
-{ "item": "ليمون", "amount": 30, "unit": "ml" }
-],
-"steps": [
-"تتبيل الدجاج",
-"تركه ساعتين",
-"الشوي",
-"التقديم"
-],
-"tags": ["protein", "fast"],
-"time_minutes": 40,
-"temperature": 200,
-"difficulty": "medium"
-},
-{
-"id": 7,
-"name": "فراخ مشوية",
-"ingredients": [
-{ "item": "دجاج", "amount": 1, "unit": "kg" },
-{ "item": "ليمون", "amount": 30, "unit": "ml" },
-{ "item": "بهارات", "amount": 15, "unit": "g" }
-],
-"steps": [
-"تتبيل الفراخ",
-"الخبز في الفرن",
-"التقليب حتى النضج"
-],
-"tags": ["protein"],
-"time_minutes": 50,
-"temperature": 200,
-"difficulty": "medium"
-},
-{
-"id": 8,
-"name": "فراخ مقلية",
-"ingredients": [
-{ "item": "دجاج", "amount": 1, "unit": "kg" },
-{ "item": "دقيق", "amount": 200, "unit": "g" },
-{ "item": "بهارات", "amount": 15, "unit": "g" }
-],
-"steps": [
-"تتبيل الدجاج",
-"تغليفه بالدقيق",
-"القلي"
-],
-"tags": ["protein", "fast"],
-"time_minutes": 35,
-"temperature": 190,
-"difficulty": "medium"
-},
-{
-"id": 9,
-"name": "برجر لحم",
-"ingredients": [
-{ "item": "لحم مفروم", "amount": 500, "unit": "g" },
-{ "item": "خبز", "amount": 2, "unit": "pcs" },
-{ "item": "جبنة", "amount": 50, "unit": "g" }
-],
-"steps": [
-"تشكيل اللحم",
-"الشوي",
-"التقديم"
-],
-"tags": ["protein", "fast"],
-"time_minutes": 25,
-"temperature": 200,
-"difficulty": "easy"
-},
-{
-"id": 10,
-"name": "كفتة مشوية",
-"ingredients": [
-{ "item": "لحم مفروم", "amount": 500, "unit": "g" },
-{ "item": "بصل", "amount": 100, "unit": "g" },
-{ "item": "بهارات", "amount": 15, "unit": "g" }
-],
-"steps": [
-"خلط المكونات",
-"تشكيل أصابع",
-"الشوي"
-],
-"tags": ["protein"],
-"time_minutes": 45,
-"temperature": 200,
-"difficulty": "medium"
-},
-{
-"id": 11,
-"name": "أرز أبيض",
-"ingredients": [
-{ "item": "أرز", "amount": 2, "unit": "cup" },
-{ "item": "ماء", "amount": 3, "unit": "cup" },
-{ "item": "ملح", "amount": 5, "unit": "g" }
-],
-"steps": [
-"غسل الأرز",
-"السلق"
-],
-"tags": ["rice"],
-"time_minutes": 25,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 12,
-"name": "أرز بالشعرية",
-"ingredients": [
-{ "item": "أرز", "amount": 2, "unit": "cup" },
-{ "item": "شعرية", "amount": 50, "unit": "g" },
-{ "item": "زيت", "amount": 20, "unit": "ml" }
-],
-"steps": [
-"تحمير الشعرية",
-"إضافة الأرز",
-"الطهي"
-],
-"tags": ["rice"],
-"time_minutes": 30,
-"temperature": 120,
-"difficulty": "easy"
-},
-{
-"id": 13,
-"name": "كشري مصري",
-"ingredients": [
-{ "item": "أرز", "amount": 200, "unit": "g" },
-{ "item": "عدس", "amount": 150, "unit": "g" },
-{ "item": "مكرونة", "amount": 150, "unit": "g" },
-{ "item": "بصل", "amount": 100, "unit": "g" }
-],
-"steps": [
-"سلق المكونات",
-"تحضير الصلصة",
-"الخلط"
-],
-"tags": ["rice", "pasta"],
-"time_minutes": 70,
-"temperature": 180,
-"difficulty": "hard"
-},
-{
-"id": 14,
-"name": "مجدرة",
-"ingredients": [
-{ "item": "عدس", "amount": 200, "unit": "g" },
-{ "item": "أرز", "amount": 200, "unit": "g" },
-{ "item": "بصل", "amount": 100, "unit": "g" }
-],
-"steps": [
-"سلق العدس",
-"طهي الأرز",
-"الخلط"
-],
-"tags": ["rice"],
-"time_minutes": 50,
-"temperature": 160,
-"difficulty": "easy"
-},
-{
-"id": 15,
-"name": "فول مدمس",
-"ingredients": [
-{ "item": "فول", "amount": 300, "unit": "g" },
-{ "item": "زيت", "amount": 20, "unit": "ml" },
-{ "item": "ليمون", "amount": 20, "unit": "ml" }
-],
-"steps": [
-"تسخين الفول",
-"إضافة الزيت والليمون"
-],
-"tags": ["fast"],
-"time_minutes": 20,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 16,
-"name": "بيتزا جبنة",
-"ingredients": [
-{ "item": "دقيق", "amount": 300, "unit": "g" },
-{ "item": "موزاريلا", "amount": 200, "unit": "g" },
-{ "item": "صلصة طماطم", "amount": 150, "unit": "g" }
-],
-"steps": [
-"تحضير العجين",
-"إضافة الصلصة",
-"إضافة الجبنة",
-"الخبز"
-],
-"tags": ["cheese", "oven"],
-"time_minutes": 30,
-"temperature": 220,
-"difficulty": "easy"
-},
-{
-"id": 17,
-"name": "بيتزا فراخ",
-"ingredients": [
-{ "item": "دجاج", "amount": 200, "unit": "g" },
-{ "item": "جبنة", "amount": 150, "unit": "g" }
-],
-"steps": [
-"تحضير العجين",
-"إضافة الدجاج",
-"الخبز"
-],
-"tags": ["protein", "oven"],
-"time_minutes": 35,
-"temperature": 220,
-"difficulty": "medium"
-},
-{
-"id": 18,
-"name": "بيتزا لحمة",
-"ingredients": [
-{ "item": "لحم مفروم", "amount": 200, "unit": "g" },
-{ "item": "جبنة", "amount": 150, "unit": "g" }
-],
-"steps": [
-"تحضير العجين",
-"إضافة اللحم",
-"الخبز"
-],
-"tags": ["protein", "oven"],
-"time_minutes": 35,
-"temperature": 220,
-"difficulty": "medium"
-},
-{
-"id": 19,
-"name": "ساندوتش شاورما",
-"ingredients": [
-{ "item": "دجاج", "amount": 150, "unit": "g" },
-{ "item": "خبز", "amount": 1, "unit": "pcs" }
-],
-"steps": [
-"تسخين الدجاج",
-"لفه في الخبز"
-],
-"tags": ["fast"],
-"time_minutes": 15,
-"temperature": 0,
-"difficulty": "easy"
-},
-{
-"id": 20,
-"name": "بطاطس مقلية",
-"ingredients": [
-{ "item": "بطاطس", "amount": 300, "unit": "g" },
-{ "item": "زيت", "amount": 500, "unit": "ml" }
-],
-"steps": [
-"تقطيع البطاطس",
-"القلي"
-],
-"tags": ["fast"],
-"time_minutes": 20,
-"temperature": 180,
-"difficulty": "easy"
-},
-{
-"id": 21,
-"name": "فشار",
-"ingredients": [
-{ "item": "ذرة", "amount": 100, "unit": "g" },
-{ "item": "زيت", "amount": 20, "unit": "ml" }
-],
-"steps": [
-"تسخين الزيت",
-"تفجير الذرة"
-],
-"tags": ["fast"],
-"time_minutes": 10,
-"temperature": 180,
-"difficulty": "easy"
-},
-{
-"id": 22,
-"name": "ناجتس",
-"ingredients": [
-{ "item": "دجاج", "amount": 300, "unit": "g" },
-{ "item": "بقسماط", "amount": 100, "unit": "g" }
-],
-"steps": [
-"تشكيل الدجاج",
-"القلي"
-],
-"tags": ["fast"],
-"time_minutes": 25,
-"temperature": 190,
-"difficulty": "easy"
-},
-{
-"id": 23,
-"name": "كريب",
-"ingredients": [
-{ "item": "دقيق", "amount": 200, "unit": "g" },
-{ "item": "بيض", "amount": 2, "unit": "pcs" },
-{ "item": "لبن", "amount": 200, "unit": "ml" }
-],
-"steps": [
-"خلط المكونات",
-"الطهي في مقلاة"
-],
-"tags": ["dessert"],
-"time_minutes": 15,
-"temperature": 160,
-"difficulty": "easy"
-},
-{
-"id": 24,
-"name": "بان كيك",
-"ingredients": [
-{ "item": "دقيق", "amount": 200, "unit": "g" },
-{ "item": "بيض", "amount": 2, "unit": "pcs" },
-{ "item": "لبن", "amount": 200, "unit": "ml" }
-],
-"steps": [
-"خلط",
-"الطهي"
-],
-"tags": ["dessert"],
-"time_minutes": 20,
-"temperature": 160,
-"difficulty": "easy"
-},
-{
-"id": 25,
-"name": "وافل",
-"ingredients": [
-{ "item": "دقيق", "amount": 200, "unit": "g" },
-{ "item": "بيض", "amount": 2, "unit": "pcs" }
-],
-"steps": [
-"خلط",
-"الطهي في جهاز الوافل"
-],
-"tags": ["dessert"],
-"time_minutes": 25,
-"temperature": 170,
-"difficulty": "easy"
-}.
-{
-"id": 26,
-"name": "شوربة عدس",
-"ingredients": [
-{ "item": "عدس", "amount": 250, "unit": "g" },
-{ "item": "بصل", "amount": 100, "unit": "g" },
-{ "item": "جزر", "amount": 100, "unit": "g" },
-{ "item": "ثوم", "amount": 10, "unit": "g" },
-{ "item": "كمون", "amount": 5, "unit": "g" }
-],
-"steps": ["غسل العدس", "سلقه مع الخضار", "الخلط بالخلاط", "التقديم"],
-"tags": ["soup", "cheap"],
-"time_minutes": 35,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 27,
-"name": "شوربة فراخ",
-"ingredients": [
-{ "item": "دجاج", "amount": 500, "unit": "g" },
-{ "item": "بصل", "amount": 100, "unit": "g" },
-{ "item": "جزر", "amount": 100, "unit": "g" },
-{ "item": "كرفس", "amount": 50, "unit": "g" }
-],
-"steps": ["سلق الدجاج", "إضافة الخضار", "الغلي", "التقديم"],
-"tags": ["soup", "protein"],
-"time_minutes": 45,
-"temperature": 100,
-"difficulty": "medium"
-},
-{
-"id": 28,
-"name": "سلطة خضراء",
-"ingredients": [
-{ "item": "خس", "amount": 100, "unit": "g" },
-{ "item": "خيار", "amount": 100, "unit": "g" },
-{ "item": "طماطم", "amount": 100, "unit": "g" }
-],
-"steps": ["تقطيع الخضار", "الخلط", "التقديم"],
-"tags": ["salad", "fast"],
-"time_minutes": 10,
-"temperature": 0,
-"difficulty": "easy"
-},
-{
-"id": 29,
-"name": "سلطة تونة",
-"ingredients": [
-{ "item": "تونة", "amount": 150, "unit": "g" },
-{ "item": "خس", "amount": 100, "unit": "g" },
-{ "item": "ذرة", "amount": 100, "unit": "g" }
-],
-"steps": ["تصفية التونة", "الخلط", "التقديم"],
-"tags": ["salad", "protein", "fast"],
-"time_minutes": 10,
-"temperature": 0,
-"difficulty": "easy"
-},
-{
-"id": 30,
-"name": "بيض مقلي",
-"ingredients": [
-{ "item": "بيض", "amount": 3, "unit": "pcs" },
-{ "item": "زيت", "amount": 20, "unit": "ml" }
-],
-"steps": ["تسخين الزيت", "قلي البيض"],
-"tags": ["fast", "protein"],
-"time_minutes": 8,
-"temperature": 160,
-"difficulty": "easy"
-},
-{
-"id": 31,
-"name": "أومليت خضار",
-"ingredients": [
-{ "item": "بيض", "amount": 3, "unit": "pcs" },
-{ "item": "فلفل", "amount": 50, "unit": "g" },
-{ "item": "بصل", "amount": 50, "unit": "g" }
-],
-"steps": ["خلط البيض", "إضافة الخضار", "الطهي"],
-"tags": ["fast", "protein"],
-"time_minutes": 12,
-"temperature": 160,
-"difficulty": "easy"
-},
-{
-"id": 32,
-"name": "فطير مشلتت",
-"ingredients": [
-{ "item": "دقيق", "amount": 500, "unit": "g" },
-{ "item": "زبدة", "amount": 100, "unit": "g" }
-],
-"steps": ["عجن", "فرد", "خبز"],
-"tags": ["bread", "fancy"],
-"time_minutes": 50,
-"temperature": 200,
-"difficulty": "medium"
-},
-{
-"id": 33,
-"name": "عيش بلدي",
-"ingredients": [
-{ "item": "دقيق", "amount": 500, "unit": "g" },
-{ "item": "خميرة", "amount": 7, "unit": "g" }
-],
-"steps": ["عجن", "تخمير", "خبز"],
-"tags": ["bread"],
-"time_minutes": 30,
-"temperature": 220,
-"difficulty": "easy"
-},
-{
-"id": 34,
-"name": "توست جبنة",
-"ingredients": [
-{ "item": "خبز", "amount": 2, "unit": "pcs" },
-{ "item": "جبنة", "amount": 100, "unit": "g" }
-],
-"steps": ["حشو الجبنة", "تحميص"],
-"tags": ["fast", "cheese"],
-"time_minutes": 10,
-"temperature": 180,
-"difficulty": "easy"
-},
-{
-"id": 35,
-"name": "كرواسون",
-"ingredients": [
-{ "item": "دقيق", "amount": 300, "unit": "g" },
-{ "item": "زبدة", "amount": 150, "unit": "g" }
-],
-"steps": ["عجن", "طبقات", "خبز"],
-"tags": ["dessert", "fancy"],
-"time_minutes": 25,
-"temperature": 190,
-"difficulty": "hard"
-},
-{
-"id": 36,
-"name": "كيك شوكولاتة",
-"ingredients": [
-{ "item": "دقيق", "amount": 250, "unit": "g" },
-{ "item": "كاكاو", "amount": 50, "unit": "g" },
-{ "item": "سكر", "amount": 150, "unit": "g" }
-],
-"steps": ["خلط", "خبز"],
-"tags": ["dessert"],
-"time_minutes": 40,
-"temperature": 180,
-"difficulty": "medium"
-},
-{
-"id": 37,
-"name": "كيك فانيليا",
-"ingredients": [
-{ "item": "دقيق", "amount": 250, "unit": "g" },
-{ "item": "سكر", "amount": 150, "unit": "g" }
-],
-"steps": ["خلط", "خبز"],
-"tags": ["dessert"],
-"time_minutes": 40,
-"temperature": 180,
-"difficulty": "medium"
-},
-{
-"id": 38,
-"name": "رز باللبن",
-"ingredients": [
-{ "item": "أرز", "amount": 200, "unit": "g" },
-{ "item": "لبن", "amount": 1, "unit": "L" },
-{ "item": "سكر", "amount": 100, "unit": "g" }
-],
-"steps": ["سلق الأرز", "إضافة اللبن", "التحلية"],
-"tags": ["dessert"],
-"time_minutes": 30,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 39,
-"name": "مهلبية",
-"ingredients": [
-{ "item": "لبن", "amount": 1, "unit": "L" },
-{ "item": "نشا", "amount": 50, "unit": "g" },
-{ "item": "سكر", "amount": 100, "unit": "g" }
-],
-"steps": ["تسخين اللبن", "إضافة النشا", "التبريد"],
-"tags": ["dessert"],
-"time_minutes": 20,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 40,
-"name": "آيس كريم",
-"ingredients": [
-{ "item": "لبن", "amount": 500, "unit": "ml" },
-{ "item": "سكر", "amount": 100, "unit": "g" }
-],
-"steps": ["خلط", "تجميد"],
-"tags": ["dessert"],
-"time_minutes": 180,
-"temperature": -10,
-"difficulty": "easy"
-},
-{
-"id": 41,
-"name": "سمك مقلي",
-"ingredients": [
-{ "item": "سمك", "amount": 500, "unit": "g" },
-{ "item": "دقيق", "amount": 100, "unit": "g" }
-],
-"steps": ["تتبيل", "تغليف", "قلي"],
-"tags": ["protein", "fast"],
-"time_minutes": 25,
-"temperature": 180,
-"difficulty": "easy"
-},
-{
-"id": 42,
-"name": "سمك مشوي",
-"ingredients": [
-{ "item": "سمك", "amount": 500, "unit": "g" },
-{ "item": "ليمون", "amount": 30, "unit": "ml" }
-],
-"steps": ["تتبيل", "شوي"],
-"tags": ["protein"],
-"time_minutes": 30,
-"temperature": 200,
-"difficulty": "medium"
-},
-{
-"id": 43,
-"name": "كبدة",
-"ingredients": [
-{ "item": "كبدة", "amount": 300, "unit": "g" },
-{ "item": "ثوم", "amount": 10, "unit": "g" }
-],
-"steps": ["تشويح", "تتبيل"],
-"tags": ["protein", "fast"],
-"time_minutes": 20,
-"temperature": 200,
-"difficulty": "easy"
-},
-{
-"id": 44,
-"name": "طاجن بطاطس",
-"ingredients": [
-{ "item": "بطاطس", "amount": 500, "unit": "g" },
-{ "item": "لحم", "amount": 300, "unit": "g" }
-],
-"steps": ["ترتيب", "خبز"],
-"tags": ["oven", "protein"],
-"time_minutes": 60,
-"temperature": 190,
-"difficulty": "medium"
-},
-{
-"id": 45,
-"name": "محشي ورق عنب",
-"ingredients": [
-{ "item": "ورق عنب", "amount": 300, "unit": "g" },
-{ "item": "أرز", "amount": 200, "unit": "g" }
-],
-"steps": ["حشو", "سلق"],
-"tags": ["rice", "fancy"],
-"time_minutes": 90,
-"temperature": 100,
-"difficulty": "hard"
-},
-{
-"id": 46,
-"name": "محشي كوسة",
-"ingredients": [
-{ "item": "كوسة", "amount": 500, "unit": "g" },
-{ "item": "أرز", "amount": 200, "unit": "g" }
-],
-"steps": ["حشو", "سلق"],
-"tags": ["rice"],
-"time_minutes": 80,
-"temperature": 100,
-"difficulty": "medium"
-},
-{
-"id": 47,
-"name": "محشي باذنجان",
-"ingredients": [
-{ "item": "باذنجان", "amount": 500, "unit": "g" },
-{ "item": "أرز", "amount": 200, "unit": "g" }
-],
-"steps": ["حشو", "سلق"],
-"tags": ["rice"],
-"time_minutes": 80,
-"temperature": 100,
-"difficulty": "medium"
-},
-{
-"id": 48,
-"name": "برجر فراخ",
-"ingredients": [
-{ "item": "دجاج", "amount": 400, "unit": "g" },
-{ "item": "خبز", "amount": 2, "unit": "pcs" }
-],
-"steps": ["تشكيل", "شوي"],
-"tags": ["protein", "fast"],
-"time_minutes": 20,
-"temperature": 200,
-"difficulty": "easy"
-},
-{
-"id": 49,
-"name": "ساندوتش جبنة",
-"ingredients": [
-{ "item": "خبز", "amount": 2, "unit": "pcs" },
-{ "item": "جبنة", "amount": 100, "unit": "g" }
-],
-"steps": ["حشو", "تحميص"],
-"tags": ["fast", "cheese"],
-"time_minutes": 8,
-"temperature": 170,
-"difficulty": "easy"
-},
-{
-"id": 50,
-"name": "مكرونة صوص أبيض",
-"ingredients": [
-{ "item": "مكرونة", "amount": 400, "unit": "g" },
-{ "item": "لبن", "amount": 500, "unit": "ml" },
-{ "item": "دقيق", "amount": 30, "unit": "g" }
-],
-"steps": ["سلق", "تحضير الصوص", "الخلط"],
-"tags": ["pasta", "sauce"],
-"time_minutes": 25,
-"temperature": 180,
-"difficulty": "medium"
-}.
-{
-"id": 51,
-"name": "شوربة خضار",
-"ingredients": [
-{ "item": "جزر", "amount": 100, "unit": "g" },
-{ "item": "بطاطس", "amount": 150, "unit": "g" },
-{ "item": "كوسة", "amount": 100, "unit": "g" }
-],
-"steps": ["تقطيع الخضار", "السلق", "الخلط"],
-"tags": ["soup", "healthy"],
-"time_minutes": 30,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 52,
-"name": "شوربة طماطم",
-"ingredients": [
-{ "item": "طماطم", "amount": 400, "unit": "g" },
-{ "item": "بصل", "amount": 100, "unit": "g" }
-],
-"steps": ["سلق الطماطم", "الخلط", "التقديم"],
-"tags": ["soup"],
-"time_minutes": 25,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 53,
-"name": "سلطة سيزر",
-"ingredients": [
-{ "item": "خس", "amount": 150, "unit": "g" },
-{ "item": "دجاج", "amount": 200, "unit": "g" },
-{ "item": "جبنة", "amount": 50, "unit": "g" }
-],
-"steps": ["تحضير الدجاج", "خلط المكونات"],
-"tags": ["salad", "protein"],
-"time_minutes": 20,
-"temperature": 0,
-"difficulty": "easy"
-},
-{
-"id": 54,
-"name": "سلطة زبادي",
-"ingredients": [
-{ "item": "زبادي", "amount": 200, "unit": "g" },
-{ "item": "خيار", "amount": 100, "unit": "g" }
-],
-"steps": ["تقطيع", "خلط"],
-"tags": ["salad", "fast"],
-"time_minutes": 10,
-"temperature": 0,
-"difficulty": "easy"
-},
-{
-"id": 55,
-"name": "بيض مسلوق",
-"ingredients": [
-{ "item": "بيض", "amount": 3, "unit": "pcs" }
-],
-"steps": ["سلق البيض"],
-"tags": ["fast", "protein"],
-"time_minutes": 10,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 56,
-"name": "بيض أومليت جبنة",
-"ingredients": [
-{ "item": "بيض", "amount": 3, "unit": "pcs" },
-{ "item": "جبنة", "amount": 50, "unit": "g" }
-],
-"steps": ["خفق البيض", "إضافة الجبنة", "الطهي"],
-"tags": ["fast", "protein"],
-"time_minutes": 12,
-"temperature": 160,
-"difficulty": "easy"
-},
-{
-"id": 57,
-"name": "فطير بالسكر",
-"ingredients": [
-{ "item": "دقيق", "amount": 300, "unit": "g" },
-{ "item": "سكر", "amount": 50, "unit": "g" }
-],
-"steps": ["عجن", "خبز", "إضافة السكر"],
-"tags": ["dessert"],
-"time_minutes": 35,
-"temperature": 180,
-"difficulty": "medium"
-},
-{
-"id": 58,
-"name": "بسبوسة",
-"ingredients": [
-{ "item": "سميد", "amount": 300, "unit": "g" },
-{ "item": "سكر", "amount": 150, "unit": "g" }
-],
-"steps": ["خلط", "خبز", "تسقية"],
-"tags": ["dessert"],
-"time_minutes": 45,
-"temperature": 180,
-"difficulty": "medium"
-},
-{
-"id": 59,
-"name": "كنافة",
-"ingredients": [
-{ "item": "كنافة", "amount": 300, "unit": "g" },
-{ "item": "سكر", "amount": 150, "unit": "g" }
-],
-"steps": ["تجهيز", "خبز", "تحلية"],
-"tags": ["dessert", "fancy"],
-"time_minutes": 50,
-"temperature": 190,
-"difficulty": "hard"
-},
-{
-"id": 60,
-"name": "أرز بلبن قرفة",
-"ingredients": [
-{ "item": "أرز", "amount": 200, "unit": "g" },
-{ "item": "لبن", "amount": 1, "unit": "L" }
-],
-"steps": ["سلق الأرز", "إضافة اللبن", "القرفة"],
-"tags": ["dessert"],
-"time_minutes": 35,
-"temperature": 100,
-"difficulty": "easy"
-},
-{
-"id": 61,
-"name": "سمك مقلي",
-"ingredients": [
-{ "item": "سمك", "amount": 500, "unit": "g" },
-{ "item": "دقيق", "amount": 100, "unit": "g" }
-],
-"steps": ["تتبيل", "قلي"],
-"tags": ["protein", "fast"],
-"time_minutes": 25,
-"temperature": 180,
-"difficulty": "easy"
-},
-{
-"id": 62,
-"name": "سمك مشوي",
-"ingredients": [
-{ "item": "سمك", "amount": 500, "unit": "g" }
-],
-"steps": ["تتبيل", "شوي"],
-"tags": ["protein"],
-"time_minutes": 30,
-"temperature": 200,
-"difficulty": "medium"
-},
-{
-"id": 63,
-"name": "روبيان مقلي",
-"ingredients": [
-{ "item": "روبيان", "amount": 300, "unit": "g" },
-{ "item": "دقيق", "amount": 50, "unit": "g" }
-],
-"steps": ["تغليف", "قلي"],
-"tags": ["protein", "fast"],
-"time_minutes": 20,
-"temperature": 180,
-"difficulty": "easy"
-},
-{
-"id": 64,
-"name": "شوربة سي فود",
-"ingredients": [
-{ "item": "روبيان", "amount": 200, "unit": "g" },
-{ "item": "سمك", "amount": 200, "unit": "g" }
-],
-"steps": ["سلق", "خلط"],
-"tags": ["soup", "protein"],
-"time_minutes": 40,
-"temperature": 100,
-"difficulty": "medium"
-},
-{
-"id": 65,
-"name": "كبدة إسكندراني",
-"i[
-  {
-    "id": 66,
-    "name": "مكرونة بشاميل",
-    "ingredients": ["500g مكرونة", "400g لحم مفروم", "1L لبن", "3 ملاعق دقيق", "50g زبدة", "ملح", "فلفل"],
-    "steps": ["اسلق المكرونة 10 دقائق", "حضّر اللحم مع البصل والبهارات", "اعمل البشاميل بالزبدة والدقيق واللبن", "اخلط المكرونة مع جزء من الصوص", "ضع طبقات في صينية وادخل الفرن"],
-    "temperature": 180,
-    "time_minutes": 60,
-    "keywords": "مكرونة بشاميل",
-    "tags": ["pasta", "sauce", "protein"]
+  "meta": {
+    "name": "Chef AI Food Database",
+    "version": "2.0",
+    "unit_system": "metric"
   },
-  {
-    "id": 67,
-    "name": "مكرونة بالجبنة",
-    "ingredients": ["400g مكرونة", "200g جبنة موزاريلا", "200ml كريمة", "ملح", "فلفل"],
-    "steps": ["اسلق المكرونة", "سخن الكريمة", "أضف الجبنة حتى تذوب", "اخلط المكرونة", "ادخل الفرن 20 دقيقة"],
-    "temperature": 180,
-    "time_minutes": 25,
-    "keywords": "مكرونة جبنة",
-    "tags": ["pasta", "cheese"]
-  },
-  {
-    "id": 68,
-    "name": "اسباجيتي صلصة",
-    "ingredients": ["400g اسباجيتي", "صلصة طماطم", "ثوم", "زيت", "ملح"],
-    "steps": ["اسلق الاسباجيتي", "حضّر الصلصة بالثوم والزيت", "اخلطهم معًا", "قدم ساخن"],
-    "temperature": 170,
-    "time_minutes": 30,
-    "keywords": "اسباجيتي",
-    "tags": ["pasta", "sauce"]
-  },
-  {
-    "id": 69,
-    "name": "لازانيا",
-    "ingredients": ["مكرونة لازانيا", "500g لحم", "جبنة", "صلصة", "بصل"],
-    "steps": ["حضّر اللحم", "ضع طبقات مكرونة وصلصة ولحم", "أضف الجبنة", "ادخل الفرن"],
-    "temperature": 190,
-    "time_minutes": 70,
-    "keywords": "لازانيا",
-    "tags": ["pasta", "cheese"]
-  },
-  {
-    "id": 70,
-    "name": "مكرونة قلم",
-    "ingredients": ["400g مكرونة قلم", "صلصة", "ملح"],
-    "steps": ["اسلق المكرونة", "أضف الصلصة", "اخلط وقدّم"],
-    "temperature": 170,
-    "time_minutes": 25,
-    "keywords": "مكرونة",
-    "tags": ["pasta"]
-  },
-  {
-    "id": 71,
-    "name": "شاورما فراخ",
-    "ingredients": ["500g فراخ", "زبادي", "ثوم", "ليمون", "بهارات"],
-    "steps": ["تبّل الفراخ", "اتركها ساعتين", "اشويها أو اقليها", "قدم في عيش"],
-    "temperature": 200,
-    "time_minutes": 40,
-    "keywords": "شاورما",
-    "tags": ["protein"]
-  },
-  {
-    "id": 72,
-    "name": "فراخ مشوية",
-    "ingredients": ["1kg فراخ", "ليمون", "بهارات", "زيت"],
-    "steps": ["تبّل الفراخ", "ادخل الفرن", "اقلب حتى النضج"],
-    "temperature": 200,
-    "time_minutes": 50,
-    "keywords": "فراخ",
-    "tags": ["protein"]
-  },
-  {
-    "id": 73,
-    "name": "فراخ مقلية",
-    "ingredients": ["فراخ", "دقيق", "بهارات", "زيت"],
-    "steps": ["تبّل الفراخ", "غلف بالدقيق", "اقلي حتى يتحمر"],
-    "temperature": 190,
-    "time_minutes": 35,
-    "keywords": "فراخ",
-    "tags": ["protein"]
-  },
-  {
-    "id": 74,
-    "name": "برجر لحم",
-    "ingredients": ["500g لحم", "خبز", "جبنة", "ملح", "فلفل"],
-    "steps": ["شكّل اللحم أقراص", "اشويها", "ضعها في الخبز"],
-    "temperature": 200,
-    "time_minutes": 25,
-    "keywords": "برجر",
-    "tags": ["protein"]
-  },
-  {
-    "id": 75,
-    "name": "كفتة مشوية",
-    "ingredients": ["500g لحم", "بصل", "بهارات"],
-    "steps": ["اخلط المكونات", "شكّل أصابع", "اشويها"],
-    "temperature": 200,
-    "time_minutes": 45,
-    "keywords": "كفتة",
-    "tags": ["protein"]
-  },
-  {
-    "id": 76,
-    "name": "أرز أبيض",
-    "ingredients": ["2 كوب أرز", "3 كوب ماء", "ملح", "زيت"],
-    "steps": ["اغسل الأرز", "اسلقه حتى ينضج", "قدمه"],
-    "temperature": 100,
-    "time_minutes": 25,
-    "keywords": "أرز",
-    "tags": ["rice"]
-  },
-  {
-    "id": 77,
-    "name": "أرز بالشعرية",
-    "ingredients": ["2 كوب أرز", "شعرية", "زيت", "ملح"],
-    "steps": ["حمّر الشعرية", "أضف الأرز", "اطبخ حتى النضج"],
-    "temperature": 120,
-    "time_minutes": 30,
-    "keywords": "أرز",
-    "tags": ["rice"]
-  },
-  {
-    "id": 78,
-    "name": "كشري مصري",
-    "ingredients": ["أرز", "عدس", "مكرونة", "بصل", "صلصة"],
-    "steps": ["اسلق المكونات", "اقلي البصل", "اخلط الكل مع الصلصة"],
-    "temperature": 180,
-    "time_minutes": 70,
-    "keywords": "كشري",
-    "tags": ["rice", "pasta"]
-  },
-  {
-    "id": 79,
-    "name": "مجدرة",
-    "ingredients": ["عدس", "أرز", "بصل"],
-    "steps": ["اسلق العدس", "اطبخ الأرز", "اخلط"],
-    "temperature": 160,
-    "time_minutes": 50,
-    "keywords": "مجدرة",
-    "tags": ["rice"]
-  },
-  {
-    "id": 80,
-    "name": "فول مدمس",
-    "ingredients": ["فول", "زيت", "ليمون", "ثوم"],
-    "steps": ["سخن الفول", "أضف الزيت والليمون", "قدّم"],
-    "temperature": 100,
-    "time_minutes": 20,
-    "keywords": "فول",
-    "tags": ["fast"]
-  },
-
-  {
-    "id": 81,
-    "name": "بيتزا جبنة",
-    "ingredients": ["300g دقيق", "خميرة", "جبنة", "صلصة"],
-    "steps": ["اعجن العجين", "ضع الصلصة", "أضف الجبنة", "اخبز"],
-    "temperature": 220,
-    "time_minutes": 30,
-    "keywords": "بيتزا",
-    "tags": ["cheese"]
-  },
-  {
-    "id": 82,
-    "name": "بيتزا فراخ",
-    "ingredients": ["عجين", "فراخ", "جبنة"],
-    "steps": ["افرد العجين", "أضف الفراخ", "اخبز"],
-    "temperature": 220,
-    "time_minutes": 35,
-    "keywords": "بيتزا",
-    "tags": ["protein"]
-  },
-  {
-    "id": 83,
-    "name": "بيتزا لحمة",
-    "ingredients": ["عجين", "لحم", "جبنة"],
-    "steps": ["افرد", "أضف اللحم", "اخبز"],
-    "temperature": 220,
-    "time_minutes": 35,
-    "keywords": "بيتزا",
-    "tags": ["protein"]
-  },
-  {
-    "id": 84,
-    "name": "ساندوتش شاورما",
-    "ingredients": ["فراخ", "عيش", "ثوم"],
-    "steps": ["سخن الفراخ", "لف في العيش"],
-    "temperature": 0,
-    "time_minutes": 15,
-    "keywords": "شاورما",
-    "tags": ["fast"]
-  },
-  {
-    "id": 85,
-    "name": "بطاطس مقلية",
-    "ingredients": ["بطاطس", "زيت", "ملح"],
-    "steps": ["اقطع البطاطس", "اقليها"],
-    "temperature": 180,
-    "time_minutes": 20,
-    "keywords": "بطاطس",
-    "tags": ["fast"]
-  },
-
-  {
-    "id": 86,
-    "name": "فشار",
-    "ingredients": ["ذرة", "زيت"],
-    "steps": ["سخن الزيت", "ضع الذرة حتى تنفجر"],
-    "temperature": 180,
-    "time_minutes": 10,
-    "keywords": "فشار",
-    "tags": ["fast"]
-  },
-  {
-    "id": 87,
-    "name": "ناجتس",
-    "ingredients": ["دجاج", "بقسماط", "بيض"],
-    "steps": ["شكّل", "اقلي"],
-    "temperature": 190,
-    "time_minutes": 25,
-    "keywords": "ناجتس",
-    "tags": ["fast"]
-  },
-  {
-    "id": 88,
-    "name": "كريب",
-    "ingredients": ["دقيق", "بيض", "لبن"],
-    "steps": ["اخلط", "اطبخ"],
-    "temperature": 160,
-    "time_minutes": 15,
-    "keywords": "كريب",
-    "tags": ["dessert"]
-  },
-  {
-    "id": 89,
-    "name": "بان كيك",
-    "ingredients": ["دقيق", "بيض", "لبن"],
-    "steps": ["اخلط", "اطبخ"],
-    "temperature": 160,
-    "time_minutes": 20,
-    "keywords": "بان كيك",
-    "tags": ["dessert"]
-  },
-  {
-    "id": 90,
-    "name": "وافل",
-    "ingredients": ["دقيق", "بيض"],
-    "steps": ["اخلط", "اطبخ"],
-    "temperature": 170,
-    "time_minutes": 25,
-    "keywords": "وافل",
-    "tags": ["dessert"]
-  }
-]
+  "recipes": [
+    {
+      "id": 1,
+      "name": "مكرونة بشاميل",
+      "ingredients": [
+        { "item": "مكرونة", "amount": 500, "unit": "g" },
+        { "item": "لحم مفروم", "amount": 400, "unit": "g" },
+        { "item": "لبن", "amount": 1, "unit": "L" },
+        { "item": "زبدة", "amount": 50, "unit": "g" },
+        { "item": "دقيق", "amount": 30, "unit": "g" },
+        { "item": "ملح", "amount": 10, "unit": "g" }
+      ],
+      "steps": [
+        "سلق المكرونة 10 دقائق",
+        "تشويح اللحم المفروم",
+        "تحضير البشاميل",
+        "الخلط والخبز"
+      ],
+      "tags": ["pasta", "sauce", "protein", "oven"],
+      "time_minutes": 60,
+      "temperature": 180,
+      "difficulty": "medium"
+    },
+    {
+      "id": 2,
+      "name": "مكرونة بالجبنة",
+      "ingredients": [
+        { "item": "مكرونة", "amount": 400, "unit": "g" },
+        { "item": "موزاريلا", "amount": 200, "unit": "g" },
+        { "item": "كريمة", "amount": 200, "unit": "ml" },
+        { "item": "ملح", "amount": 5, "unit": "g" }
+      ],
+      "steps": [
+        "سلق المكرونة",
+        "تسخين الكريمة",
+        "إذابة الجبنة",
+        "الخلط"
+      ],
+      "tags": ["pasta", "cheese", "fast"],
+      "time_minutes": 25,
+      "temperature": 180,
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "name": "اسباجيتي صلصة",
+      "ingredients": [
+        { "item": "اسباجيتي", "amount": 400, "unit": "g" },
+        { "item": "صلصة طماطم", "amount": 300, "unit": "g" },
+        { "item": "ثوم", "amount": 10, "unit": "g" },
+        { "item": "زيت", "amount": 20, "unit": "ml" }
+      ],
+      "steps": [
+        "سلق الاسباجيتي",
+        "تحضير الصلصة",
+        "الخلط"
+      ],
+      "tags": ["pasta", "sauce"],
+      "time_minutes": 30,
+      "temperature": 170,
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "name": "لازانيا",
+      "ingredients": [
+        { "item": "شرائح لازانيا", "amount": 250, "unit": "g" },
+        { "item": "لحم مفروم", "amount": 500, "unit": "g" },
+        { "item": "صلصة طماطم", "amount": 300, "unit": "g" },
+        { "item": "جبنة", "amount": 200, "unit": "g" }
+      ],
+      "steps": [
+        "تحضير اللحم",
+        "ترتيب الطبقات",
+        "إضافة الجبنة",
+        "الخبز"
+      ],
+      "tags": ["pasta", "cheese", "oven"],
+      "time_minutes": 70,
+      "temperature": 190,
+      "difficulty": "hard"
+    },
+    {
+      "id": 5,
+      "name": "مكرونة قلم",
+      "ingredients": [
+        { "item": "مكرونة قلم", "amount": 400, "unit": "g" },
+        { "item": "��لصة طماطم", "amount": 200, "unit": "g" },
+        { "item": "زيت", "amount": 20, "unit": "ml" }
+      ],
+      "steps": [
+        "سلق المكرونة",
+        "إضافة الصلصة",
+        "الخلط"
+      ],
+      "tags": ["pasta"],
+      "time_minutes": 25,
+      "temperature": 170,
+      "difficulty": "easy"
+    },
+    {
+      "id": 6,
+      "name": "شاورما فراخ",
+      "ingredients": [
+        { "item": "دجاج", "amount": 1, "unit": "kg" },
+        { "item": "زبادي", "amount": 150, "unit": "g" },
+        { "item": "ثوم", "amount": 20, "unit": "g" },
+        { "item": "ليمون", "amount": 30, "unit": "ml" }
+      ],
+      "steps": [
+        "تتبيل الدجاج",
+        "تركه ساعتين",
+        "الشوي",
+        "التقديم"
+      ],
+      "tags": ["protein", "fast"],
+      "time_minutes": 40,
+      "temperature": 200,
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "name": "فراخ مشوية",
+      "ingredients": [
+        { "item": "دجاج", "amount": 1, "unit": "kg" },
+        { "item": "ليمون", "amount": 30, "unit": "ml" },
+        { "item": "بهارات", "amount": 15, "unit": "g" }
+      ],
+      "steps": [
+        "تتبيل الفراخ",
+        "الخبز في الفرن",
+        "التقليب حتى النضج"
+      ],
+      "tags": ["protein"],
+      "time_minutes": 50,
+      "temperature": 200,
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "name": "فراخ مقلية",
+      "ingredients": [
+        { "item": "دجاج", "amount": 1, "unit": "kg" },
+        { "item": "دقيق", "amount": 200, "unit": "g" },
+        { "item": "بهارات", "amount": 15, "unit": "g" }
+      ],
+      "steps": [
+        "تتبيل الدجاج",
+        "تغليفه بالدقيق",
+        "القلي"
+      ],
+      "tags": ["protein", "fast"],
+      "time_minutes": 35,
+      "temperature": 190,
+      "difficulty": "medium"
+    },
+    {
+      "id": 9,
+      "name": "برجر لحم",
+      "ingredients": [
+        { "item": "لحم مفروم", "amount": 500, "unit": "g" },
+        { "item": "خبز", "amount": 2, "unit": "pcs" },
+        { "item": "جبنة", "amount": 50, "unit": "g" }
+      ],
+      "steps": [
+        "تشكيل اللحم",
+        "الشوي",
+        "التقديم"
+      ],
+      "tags": ["protein", "fast"],
+      "time_minutes": 25,
+      "temperature": 200,
+      "difficulty": "easy"
+    },
+    {
+      "id": 10,
+      "name": "كفتة مشوية",
+      "ingredients": [
+        { "item": "لحم مفروم", "amount": 500, "unit": "g" },
+        { "item": "بصل", "amount": 100, "unit": "g" },
+        { "item": "بهارات", "amount": 15, "unit": "g" }
+      ],
+      "steps": [
+        "خلط المكونات",
+        "تشكيل أصابع",
+        "الشوي"
+      ],
+      "tags": ["protein"],
+      "time_minutes": 45,
+      "temperature": 200,
+      "difficulty": "medium"
+    },
+    {
+      "id": 11,
+      "name": "أرز أبيض",
+      "ingredients": [
+        { "item": "أرز", "amount": 2, "unit": "cup" },
+        { "item": "ماء", "amount": 3, "unit": "cup" },
+        { "item": "ملح", "amount": 5, "unit": "g" }
+      ],
+      "steps": [
+        "غسل الأرز",
+        "السلق"
+      ],
+      "tags": ["rice"],
+      "time_minutes": 25,
+      "temperature": 100,
+      "difficulty": "easy"
+    },
+    {
+      "id": 12,
+      "name": "أرز بالشعرية",
+      "ingredients": [
+        { "item": "أرز", "amount": 2, "unit": "cup" },
+        { "item": "شعرية", "amount": 50, "unit": "g" },
+        { "item": "زيت", "amount": 20, "unit": "ml" }
+      ],
+      "steps": [
+        "تحمير الشعرية",
+        "إضافة الأرز",
+        "الطهي"
+      ],
+      "tags": ["rice"],
+      "time_minutes": 30,
+      "temperature": 120,
+      "difficulty": "easy"
+    },
+    {
+      "id": 13,
+      "name": "كشري مصري",
+      "ingredients": [
+        { "item": "أرز", "amount": 200, "unit": "g" },
+        { "item": "عدس", "amount": 150, "unit": "g" },
+        { "item": "مكرونة", "amount": 150, "unit": "g" },
+        { "item": "بصل", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "سلق المكونات",
+        "تحضير الصلصة",
+        "الخلط"
+      ],
+      "tags": ["rice", "pasta"],
+      "time_minutes": 70,
+      "temperature": 180,
+      "difficulty": "hard"
+    },
+    {
+      "id": 14,
+      "name": "مجدرة",
+      "ingredients": [
+        { "item": "عدس", "amount": 200, "unit": "g" },
+        { "item": "أرز", "amount": 200, "unit": "g" },
+        { "item": "بصل", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "سلق العدس",
+        "طهي الأرز",
+        "الخلط"
+      ],
+      "tags": ["rice"],
+      "time_minutes": 50,
+      "temperature": 160,
+      "difficulty": "easy"
+    },
+    {
+      "id": 15,
+      "name": "فول مدمس",
+      "ingredients": [
+        { "item": "فول", "amount": 300, "unit": "g" },
+        { "item": "زيت", "amount": 20, "unit": "ml" },
+        { "item": "ليمون", "amount": 20, "unit": "ml" }
+      ],
+      "steps": [
+        "تسخين الفول",
+        "إضافة الزيت والليمون"
+      ],
+      "tags": ["fast"],
+      "time_minutes": 20,
+      "temperature": 100,
+      "difficulty": "easy"
+    },
+    {
+      "id": 16,
+      "name": "بيتزا جبنة",
+      "ingredients": [
+        { "item": "دقيق", "amount": 300, "unit": "g" },
+        { "item": "موزاريلا", "amount": 200, "unit": "g" },
+        { "item": "صلصة طماطم", "amount": 150, "unit": "g" }
+      ],
+      "steps": [
+        "تحضير العجين",
+        "إضافة الصلصة",
+        "إضافة الجب��ة",
+        "الخبز"
+      ],
+      "tags": ["cheese", "oven"],
+      "time_minutes": 30,
+      "temperature": 220,
+      "difficulty": "easy"
+    },
+    {
+      "id": 17,
+      "name": "بيتزا فراخ",
+      "ingredients": [
+        { "item": "دجاج", "amount": 200, "unit": "g" },
+        { "item": "جبنة", "amount": 150, "unit": "g" }
+      ],
+      "steps": [
+        "تحضير العجين",
+        "إضافة الدجاج",
+        "الخبز"
+      ],
+      "tags": ["protein", "oven"],
+      "time_minutes": 35,
+      "temperature": 220,
+      "difficulty": "medium"
+    },
+    {
+      "id": 18,
+      "name": "بيتزا لحمة",
+      "ingredients": [
+        { "item": "لحم مفروم", "amount": 200, "unit": "g" },
+        { "item": "جبنة", "amount": 150, "unit": "g" }
+      ],
+      "steps": [
+        "تحضير العجين",
+        "إضافة اللحم",
+        "الخبز"
+      ],
+      "tags": ["protein", "oven"],
+      "time_minutes": 35,
+      "temperature": 220,
+      "difficulty": "medium"
+    },
+    {
+      "id": 19,
+      "name": "ساندوتش شاورما",
+      "ingredients": [
+        { "item": "دجاج", "amount": 150, "unit": "g" },
+        { "item": "خبز", "amount": 1, "unit": "pcs" }
+      ],
+      "steps": [
+        "تسخين الدجاج",
+        "لفه في الخبز"
+      ],
+      "tags": ["fast"],
+      "time_minutes": 15,
+      "temperature": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 20,
+      "name": "بطاطس مقلية",
+      "ingredients": [
+        { "item": "بطاطس", "amount": 300, "unit": "g" },
+        { "item": "زيت", "amount": 500, "unit": "ml" }
+      ],
+      "steps": [
+        "تقطيع البطاطس",
+        "القلي"
+      ],
+      "tags": ["fast"],
+      "time_minutes": 20,
+      "temperature": 180,
+      "difficulty": "easy"
+    },
+    {
+      "id": 21,
+      "name": "فشار",
+      "ingredients": [
+        { "item": "ذرة", "amount": 100, "unit": "g" },
+        { "item": "زيت", "amount": 20, "unit": "ml" }
+      ],
+      "steps": [
+        "تسخين الزيت",
+        "تفجير الذرة"
+      ],
+      "tags": ["fast"],
+      "time_minutes": 10,
+      "temperature": 180,
+      "difficulty": "easy"
+    },
+    {
+      "id": 22,
+      "name": "ناجتس",
+      "ingredients": [
+        { "item": "دجاج", "amount": 300, "unit": "g" },
+        { "item": "بقسماط", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "تشكيل الدجاج",
+        "القلي"
+      ],
+      "tags": ["fast"],
+      "time_minutes": 25,
+      "temperature": 190,
+      "difficulty": "easy"
+    },
+    {
+      "id": 23,
+      "name": "كريب",
+      "ingredients": [
+        { "item": "دقيق", "amount": 200, "unit": "g" },
+        { "item": "بيض", "amount": 2, "unit": "pcs" },
+        { "item": "��بن", "amount": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "خلط المكونات",
+        "الطهي في مقلاة"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 15,
+      "temperature": 160,
+      "difficulty": "easy"
+    },
+    {
+      "id": 24,
+      "name": "بان كيك",
+      "ingredients": [
+        { "item": "دقيق", "amount": 200, "unit": "g" },
+        { "item": "بيض", "amount": 2, "unit": "pcs" },
+        { "item": "لبن", "amount": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "خلط",
+        "الطهي"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 20,
+      "temperature": 160,
+      "difficulty": "easy"
+    },
+    {
+      "id": 25,
+      "name": "وافل",
+      "ingredients": [
+        { "item": "دقيق", "amount": 200, "unit": "g" },
+        { "item": "بيض", "amount": 2, "unit": "pcs" }
+      ],
+      "steps": [
+        "خلط",
+        "الطهي في جهاز الوافل"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 25,
+      "temperature": 170,
+      "difficulty": "easy"
+    },
+    {
+      "id": 26,
+      "name": "شوربة عدس",
+      "ingredients": [
+        { "item": "عدس", "amount": 250, "unit": "g" },
+        { "item": "بصل", "amount": 100, "unit": "g" },
+        { "item": "جزر", "amount": 100, "unit": "g" },
+        { "item": "ثوم", "amount": 10, "unit": "g" },
+        { "item": "كمون", "amount": 5, "unit": "g" }
+      ],
+      "steps": [
+        "غسل العدس",
+        "سلقه مع الخضار",
+        "الخلط بالخلاط",
+        "التقديم"
+      ],
+      "tags": ["soup", "cheap"],
+      "time_minutes": 35,
+      "temperature": 100,
+      "difficulty": "easy"
+    },
+    {
+      "id": 27,
+      "name": "شوربة فراخ",
+      "ingredients": [
+        { "item": "دجاج", "amount": 500, "unit": "g" },
+        { "item": "بصل", "amount": 100, "unit": "g" },
+        { "item": "جزر", "amount": 100, "unit": "g" },
+        { "item": "كرفس", "amount": 50, "unit": "g" }
+      ],
+      "steps": [
+        "سلق الدجاج",
+        "إضافة الخضار",
+        "الغلي",
+        "التقديم"
+      ],
+      "tags": ["soup", "protein"],
+      "time_minutes": 45,
+      "temperature": 100,
+      "difficulty": "medium"
+    },
+    {
+      "id": 28,
+      "name": "سلطة خضراء",
+      "ingredients": [
+        { "item": "خس", "amount": 100, "unit": "g" },
+        { "item": "خيار", "amount": 100, "unit": "g" },
+        { "item": "طماطم", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "تقطيع الخضار",
+        "الخلط",
+        "التقديم"
+      ],
+      "tags": ["salad", "fast"],
+      "time_minutes": 10,
+      "temperature": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 29,
+      "name": "سلطة تونة",
+      "ingredients": [
+        { "item": "تونة", "amount": 150, "unit": "g" },
+        { "item": "خس", "amount": 100, "unit": "g" },
+        { "item": "ذرة", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "تصفية التونة",
+        "الخلط",
+        "التقديم"
+      ],
+      "tags": ["salad", "protein", "fast"],
+      "time_minutes": 10,
+      "temperature": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 30,
+      "name": "بيض مقلي",
+      "ingredients": [
+        { "item": "بيض", "amount": 3, "unit": "pcs" },
+        { "item": "زيت", "amount": 20, "unit": "ml" }
+      ],
+      "steps": [
+        "تسخين الزيت",
+        "قلي البيض"
+      ],
+      "tags": ["fast", "protein"],
+      "time_minutes": 8,
+      "temperature": 160,
+      "difficulty": "easy"
+    },
+    {
+      "id": 31,
+      "name": "أومليت خضار",
+      "ingredients": [
+        { "item": "بيض", "amount": 3, "unit": "pcs" },
+        { "item": "فلفل", "amount": 50, "unit": "g" },
+        { "item": "بصل", "amount": 50, "unit": "g" }
+      ],
+      "steps": [
+        "خلط البيض",
+        "إضافة الخضار",
+        "الطهي"
+      ],
+      "tags": ["fast", "protein"],
+      "time_minutes": 12,
+      "temperature": 160,
+      "difficulty": "easy"
+    },
+    {
+      "id": 32,
+      "name": "فطير مشلتت",
+      "ingredients": [
+        { "item": "دقيق", "amount": 500, "unit": "g" },
+        { "item": "زبدة", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "عجن",
+        "فرد",
+        "خبز"
+      ],
+      "tags": ["bread", "fancy"],
+      "time_minutes": 50,
+      "temperature": 200,
+      "difficulty": "medium"
+    },
+    {
+      "id": 33,
+      "name": "عيش بلدي",
+      "ingredients": [
+        { "item": "دقيق", "amount": 500, "unit": "g" },
+        { "item": "خميرة", "amount": 7, "unit": "g" }
+      ],
+      "steps": [
+        "عجن",
+        "تخمير",
+        "خبز"
+      ],
+      "tags": ["bread"],
+      "time_minutes": 30,
+      "temperature": 220,
+      "difficulty": "easy"
+    },
+    {
+      "id": 34,
+      "name": "توست جبنة",
+      "ingredients": [
+        { "item": "خبز", "amount": 2, "unit": "pcs" },
+        { "item": "جبنة", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "حشو الجبنة",
+        "تحميص"
+      ],
+      "tags": ["fast", "cheese"],
+      "time_minutes": 10,
+      "temperature": 180,
+      "difficulty": "easy"
+    },
+    {
+      "id": 35,
+      "name": "كرواسون",
+      "ingredients": [
+        { "item": "دقيق", "amount": 300, "unit": "g" },
+        { "item": "زبدة", "amount": 150, "unit": "g" }
+      ],
+      "steps": [
+        "عجن",
+        "طبقات",
+        "خبز"
+      ],
+      "tags": ["dessert", "fancy"],
+      "time_minutes": 25,
+      "temperature": 190,
+      "difficulty": "hard"
+    },
+    {
+      "id": 36,
+      "name": "كيك شوكولاتة",
+      "ingredients": [
+        { "item": "دقيق", "amount": 250, "unit": "g" },
+        { "item": "كاكاو", "amount": 50, "unit": "g" },
+        { "item": "سكر", "amount": 150, "unit": "g" }
+      ],
+      "steps": [
+        "خلط",
+        "خبز"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 40,
+      "temperature": 180,
+      "difficulty": "medium"
+    },
+    {
+      "id": 37,
+      "name": "كيك فانيليا",
+      "ingredients": [
+        { "item": "دقيق", "amount": 250, "unit": "g" },
+        { "item": "سكر", "amount": 150, "unit": "g" }
+      ],
+      "steps": [
+        "خلط",
+        "خبز"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 40,
+      "temperature": 180,
+      "difficulty": "medium"
+    },
+    {
+      "id": 38,
+      "name": "رز باللبن",
+      "ingredients": [
+        { "item": "أرز", "amount": 200, "unit": "g" },
+        { "item": "لبن", "amount": 1, "unit": "L" },
+        { "item": "سكر", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "سلق الأرز",
+        "إضافة اللبن",
+        "التحلية"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 30,
+      "temperature": 100,
+      "difficulty": "easy"
+    },
+    {
+      "id": 39,
+      "name": "مهلبية",
+      "ingredients": [
+        { "item": "لبن", "amount": 1, "unit": "L" },
+        { "item": "نشا", "amount": 50, "unit": "g" },
+        { "item": "سكر", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "تسخين اللبن",
+        "إضافة النشا",
+        "التبريد"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 20,
+      "temperature": 100,
+      "difficulty": "easy"
+    },
+    {
+      "id": 40,
+      "name": "آيس كريم",
+      "ingredients": [
+        { "item": "لبن", "amount": 500, "unit": "ml" },
+        { "item": "سكر", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "خلط",
+        "تجميد"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 180,
+      "temperature": -10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 41,
+      "name": "سمك مقلي",
+      "ingredients": [
+        { "item": "سمك", "amount": 500, "unit": "g" },
+        { "item": "دقيق", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "تتبيل",
+        "تغليف",
+        "قلي"
+      ],
+      "tags": ["protein", "fast"],
+      "time_minutes": 25,
+      "temperature": 180,
+      "difficulty": "easy"
+    },
+    {
+      "id": 42,
+      "name": "سمك مشوي",
+      "ingredients": [
+        { "item": "سمك", "amount": 500, "unit": "g" },
+        { "item": "ليمون", "amount": 30, "unit": "ml" }
+      ],
+      "steps": [
+        "تتبيل",
+        "شوي"
+      ],
+      "tags": ["protein"],
+      "time_minutes": 30,
+      "temperature": 200,
+      "difficulty": "medium"
+    },
+    {
+      "id": 43,
+      "name": "كبدة",
+      "ingredients": [
+        { "item": "كبدة", "amount": 300, "unit": "g" },
+        { "item": "ثوم", "amount": 10, "unit": "g" }
+      ],
+      "steps": [
+        "تشويح",
+        "تتبيل"
+      ],
+      "tags": ["protein", "fast"],
+      "time_minutes": 20,
+      "temperature": 200,
+      "difficulty": "easy"
+    },
+    {
+      "id": 44,
+      "name": "طاجن بطاطس",
+      "ingredients": [
+        { "item": "بطاطس", "amount": 500, "unit": "g" },
+        { "item": "لحم", "amount": 300, "unit": "g" }
+      ],
+      "steps": [
+        "ترتيب",
+        "خبز"
+      ],
+      "tags": ["oven", "protein"],
+      "time_minutes": 60,
+      "temperature": 190,
+      "difficulty": "medium"
+    },
+    {
+      "id": 45,
+      "name": "محشي ورق عنب",
+      "ingredients": [
+        { "item": "ورق عنب", "amount": 300, "unit": "g" },
+        { "item": "أرز", "amount": 200, "unit": "g" }
+      ],
+      "steps": [
+        "حشو",
+        "سلق"
+      ],
+      "tags": ["rice", "fancy"],
+      "time_minutes": 90,
+      "temperature": 100,
+      "difficulty": "hard"
+    },
+    {
+      "id": 46,
+      "name": "محشي كوسة",
+      "ingredients": [
+        { "item": "كوسة", "amount": 500, "unit": "g" },
+        { "item": "أرز", "amount": 200, "unit": "g" }
+      ],
+      "steps": [
+        "حشو",
+        "سلق"
+      ],
+      "tags": ["rice"],
+      "time_minutes": 80,
+      "temperature": 100,
+      "difficulty": "medium"
+    },
+    {
+      "id": 47,
+      "name": "محشي باذنجان",
+      "ingredients": [
+        { "item": "باذنجان", "amount": 500, "unit": "g" },
+        { "item": "أرز", "amount": 200, "unit": "g" }
+      ],
+      "steps": [
+        "حشو",
+        "سلق"
+      ],
+      "tags": ["rice"],
+      "time_minutes": 80,
+      "temperature": 100,
+      "difficulty": "medium"
+    },
+    {
+      "id": 48,
+      "name": "برجر فراخ",
+      "ingredients": [
+        { "item": "دجاج", "amount": 400, "unit": "g" },
+        { "item": "خبز", "amount": 2, "unit": "pcs" }
+      ],
+      "steps": [
+        "تشكيل",
+        "شوي"
+      ],
+      "tags": ["protein", "fast"],
+      "time_minutes": 20,
+      "temperature": 200,
+      "difficulty": "easy"
+    },
+    {
+      "id": 49,
+      "name": "ساندوتش جبنة",
+      "ingredients": [
+        { "item": "خبز", "amount": 2, "unit": "pcs" },
+        { "item": "جبنة", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "حشو",
+        "تحميص"
+      ],
+      "tags": ["fast", "cheese"],
+      "time_minutes": 8,
+      "temperature": 170,
+      "difficulty": "easy"
+    },
+    {
+      "id": 50,
+      "name": "مكرونة صوص أبيض",
+      "ingredients": [
+        { "item": "مكرونة", "amount": 400, "unit": "g" },
+        { "item": "لبن", "amount": 500, "unit": "ml" },
+        { "item": "دقيق", "amount": 30, "unit": "g" }
+      ],
+      "steps": [
+        "سلق",
+        "تحضير الصوص",
+        "الخلط"
+      ],
+      "tags": ["pasta", "sauce"],
+      "time_minutes": 25,
+      "temperature": 180,
+      "difficulty": "medium"
+    },
+    {
+      "id": 51,
+      "name": "شوربة خضار",
+      "ingredients": [
+        { "item": "جزر", "amount": 100, "unit": "g" },
+        { "item": "بطاطس", "amount": 150, "unit": "g" },
+        { "item": "كوسة", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "تقطيع الخضار",
+        "السلق",
+        "الخلط"
+      ],
+      "tags": ["soup", "healthy"],
+      "time_minutes": 30,
+      "temperature": 100,
+      "difficulty": "easy"
+    },
+    {
+      "id": 52,
+      "name": "شوربة طماطم",
+      "ingredients": [
+        { "item": "طماطم", "amount": 400, "unit": "g" },
+        { "item": "بصل", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "سلق الطماطم",
+        "الخلط",
+        "التقديم"
+      ],
+      "tags": ["soup"],
+      "time_minutes": 25,
+      "temperature": 100,
+      "difficulty": "easy"
+    },
+    {
+      "id": 53,
+      "name": "سلطة سيزر",
+      "ingredients": [
+        { "item": "خس", "amount": 150, "unit": "g" },
+        { "item": "دجاج", "amount": 200, "unit": "g" },
+        { "item": "جبنة", "amount": 50, "unit": "g" }
+      ],
+      "steps": [
+        "تحضير الدجاج",
+        "خلط المكونات"
+      ],
+      "tags": ["salad", "protein"],
+      "time_minutes": 20,
+      "temperature": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 54,
+      "name": "سلطة زبادي",
+      "ingredients": [
+        { "item": "زبادي", "amount": 200, "unit": "g" },
+        { "item": "خيار", "amount": 100, "unit": "g" }
+      ],
+      "steps": [
+        "تقطيع",
+        "خلط"
+      ],
+      "tags": ["salad", "fast"],
+      "time_minutes": 10,
+      "temperature": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 55,
+      "name": "بيض مسلوق",
+      "ingredients": [
+        { "item": "بيض", "amount": 3, "unit": "pcs" }
+      ],
+      "steps": [
+        "سلق البيض"
+      ],
+      "tags": ["fast", "protein"],
+      "time_minutes": 10,
+      "temperature": 100,
+      "difficulty": "easy"
+    },
+    {
+      "id": 56,
+      "name": "بيض أومليت جبنة",
+      "ingredients": [
+        { "item": "بيض", "amount": 3, "unit": "pcs" },
+        { "item": "جبنة", "amount": 50, "unit": "g" }
+      ],
+      "steps": [
+        "خفق البيض",
+        "إضافة الجبنة",
+        "الطهي"
+      ],
+      "tags": ["fast", "protein"],
+      "time_minutes": 12,
+      "temperature": 160,
+      "difficulty": "easy"
+    },
+    {
+      "id": 57,
+      "name": "فطير بالسكر",
+      "ingredients": [
+        { "item": "دقيق", "amount": 300, "unit": "g" },
+        { "item": "سكر", "amount": 50, "unit": "g" }
+      ],
+      "steps": [
+        "عجن",
+        "خبز",
+        "إضافة السكر"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 35,
+      "temperature": 180,
+      "difficulty": "medium"
+    },
+    {
+      "id": 58,
+      "name": "بسبوسة",
+      "ingredients": [
+        { "item": "سميد", "amount": 300, "unit": "g" },
+        { "item": "سكر", "amount": 150, "unit": "g" }
+      ],
+      "steps": [
+        "خلط",
+        "خبز",
+        "تسقية"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 45,
+      "temperature": 180,
+      "difficulty": "medium"
+    },
+    {
+      "id": 59,
+      "name": "كنافة",
+      "ingredients": [
+        { "item": "كنافة", "amount": 300, "unit": "g" },
+        { "item": "سكر", "amount": 150, "unit": "g" }
+      ],
+      "steps": [
+        "تجهيز",
+        "خبز",
+        "تحلية"
+      ],
+      "tags": ["dessert", "fancy"],
+      "time_minutes": 50,
+      "temperature": 190,
+      "difficulty": "hard"
+    },
+    {
+      "id": 60,
+      "name": "أرز بلبن قرفة",
+      "ingredients": [
+        { "item": "أرز", "amount": 200, "unit": "g" },
+        { "item": "لبن", "amount": 1, "unit": "L" }
+      ],
+      "steps": [
+        "سلق الأرز",
+        "إضافة اللبن",
+        "القرفة"
+      ],
+      "tags": ["dessert"],
+      "time_minutes": 35,
+      "temperature": 100,
+      "difficulty": "easy"
+    }
+  ]
+}

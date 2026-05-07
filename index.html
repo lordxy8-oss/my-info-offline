@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق الطبخ الذكي - أوفلاين</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #999;
+            font-size: 14px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        /* Search Section */
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="search"] {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="search"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #764ba2;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 15px;
+            background: #f0f0f0;
+            color: #333;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 13px;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .filter-btn:hover {
+            border-color: #667eea;
+        }
+
+        /* Recipes List */
+        .recipes-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .recipe-item {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 4px solid #667eea;
+        }
+
+        .recipe-item:hover {
+            background: #f0f0f0;
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .difficulty-easy {
+            color: #4caf50;
+            font-weight: 600;
+        }
+
+        .difficulty-medium {
+            color: #ff9800;
+            font-weight: 600;
+        }
+
+        .difficulty-hard {
+            color: #f44336;
+            font-weight: 600;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #e8eaf6;
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* Recipe Details */
+        .recipe-details {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .detail-section {
+            margin-bottom: 25px;
+        }
+
+        .detail-section h3 {
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+        }
+
+        .ingredients-list {
+            list-style: none;
+        }
+
+        .ingredients-list li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .ingredient-name {
+            font-weight: 500;
+        }
+
+        .ingredient-amount {
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .steps-list {
+            list-style: none;
+        }
+
+        .steps-list li {
+            padding: 12px 0;
+            padding-right: 15px;
+            color: #555;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+        }
+
+        .steps-list li:before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .no-selection {
+            text-align: center;
+            color: #999;
+            padding: 40px 20px;
+        }
+
+        /* Chatbot */
+        .chatbot-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            min-height: 400px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            max-width: 90%;
+            word-wrap: break-word;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .user-message {
+            background: #667eea;
+            color: white;
+            margin-right: auto;
+            text-align: right;
+        }
+
+        .bot-message {
+            background: #e8eaf6;
+            color: #333;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .chat-input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input-group input {
+            flex: 1;
+        }
+
+        .chat-input-group button {
+            padding: 12px 20px;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #999;
+            padding: 30px;
+            font-size: 14px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: #e8eaf6;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .stat-item {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .loading {
+            text-align: center;
+            color: #999;
+            padding: 20px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel: Recipes -->
+        <div class="panel">
+            <div class="header">
+                <h1>🍳 الطبخ الذكي</h1>
+                <p class="subtitle">تطبيق بحث عن الوصفات - يعمل بدون إنترنت</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalRecipes">0</div>
+                    <div class="stat-label">وصفات</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="foundRecipes">0</div>
+                    <div class="stat-label">نتائج</div>
+                </div>
+            </div>
+
+            <h2><span class="icon">🔍</span>البحث والفلترة</h2>
+
+            <div class="search-box">
+                <input type="search" id="searchInput" placeholder="ابحث عن وصفة...">
+                <button onclick="searchRecipes()">بحث</button>
+            </div>
+
+            <h3 style="color: #666; font-size: 14px; margin-bottom: 10px;">حسب الصعوبة:</h3>
+            <div class="filter-buttons" id="difficultyFilters"></div>
+
+            <h3 style="color: #666; font-size: 14px; margin-bottom: 10px; margin-top: 15px;">حسب الفئة:</h3>
+            <div class="filter-buttons" id="tagFilters"></div>
+
+            <h2 style="margin-top: 25px;"><span class="icon">📋</span>الوصفات</h2>
+            <div class="recipes-list" id="recipesList">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>جاري تحميل الوصفات...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Details & Chat -->
+        <div class="panel">
+            <div id="detailsPanel" style="display: none;">
+                <h2><span class="icon">📖</span>تفاصيل الوصفة</h2>
+                <div class="recipe-details" id="recipeDetailsContent"></div>
+            </div>
+
+            <div id="chatPanel">
+                <div class="header">
+                    <h1>🤖 مساعد الطبخ</h1>
+                    <p class="subtitle">اسأل عن أي وصفة أو مكون</p>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="bot-message">
+                        <strong>مرحباً! 👋</strong><br>
+                        أنا مساعد الطبخ الذكي. يمكنني مساعدتك في البحث عن الوصفات والإجابة على أسئلة تتعلق بالطبخ والمكونات. 
+                        <br><br>
+                        <em>ملاحظة: أنا متخصص فقط في موضوعات الطبخ والغذاء.</em>
+                    </div>
+                </div>
+
+                <div class="chat-input-group">
+                    <input type="text" id="chatInput" placeholder="أكتب سؤالك هنا..." onkeypress="if(event.key==='Enter') sendMessage()">
+                    <button onclick="sendMessage()">إرسال</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Database
+        let recipesDatabase = [];
+        let currentFilters = {
+            search: '',
+            difficulty: null,
+            tags: []
+        };
+
+        // Load database from JSON file
+        async function loadDatabase() {
+            try {
+                const response = await fetch('Cooking offine');
+                const data = await response.json();
+                recipesDatabase = data.recipes || [];
+                initializeFilters();
+                displayRecipes(recipesDatabase);
+                updateStats();
+            } catch (error) {
+                console.error('خطأ في تحميل قاعدة البيانات:', error);
+                document.getElementById('recipesList').innerHTML = `
+                    <div style="color: #f44336; padding: 20px; text-align: center;">
+                        <p>⚠️ خطأ في تحميل قاعدة البيانات</p>
+                        <p style="font-size: 12px; margin-top: 10px;">تأكد من وجود ملف "Cooking offine" في نفس المجلد</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize filters
+        function initializeFilters() {
+            const difficulties = ['easy', 'medium', 'hard'];
+            const allTags = new Set();
+
+            recipesDatabase.forEach(recipe => {
+                if (recipe.tags) {
+                    recipe.tags.forEach(tag => allTags.add(tag));
+                }
+            });
+
+            // Difficulty filters
+            const difficultyContainer = document.getElementById('difficultyFilters');
+            difficulties.forEach(diff => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                const labels = { easy: 'سهل', medium: 'متوسط', hard: 'صعب' };
+                btn.textContent = labels[diff];
+                btn.onclick = () => toggleDifficultyFilter(diff, btn);
+                difficultyContainer.appendChild(btn);
+            });
+
+            // Tag filters
+            const tagContainer = document.getElementById('tagFilters');
+            Array.from(allTags).sort().forEach(tag => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.textContent = tag;
+                btn.onclick = () => toggleTagFilter(tag, btn);
+                tagContainer.appendChild(btn);
+            });
+        }
+
+        // Toggle difficulty filter
+        function toggleDifficultyFilter(difficulty, btn) {
+            if (currentFilters.difficulty === difficulty) {
+                currentFilters.difficulty = null;
+                btn.classList.remove('active');
+            } else {
+                document.querySelectorAll('#difficultyFilters .filter-btn').forEach(b => b.classList.remove('active'));
+                currentFilters.difficulty = difficulty;
+                btn.classList.add('active');
+            }
+            applyFilters();
+        }
+
+        // Toggle tag filter
+        function toggleTagFilter(tag, btn) {
+            const index = currentFilters.tags.indexOf(tag);
+            if (index > -1) {
+                currentFilters.tags.splice(index, 1);
+                btn.classList.remove('active');
+            } else {
+                currentFilters.tags.push(tag);
+                btn.classList.add('active');
+            }
+            applyFilters();
+        }
+
+        // Search recipes
+        function searchRecipes() {
+            const searchInput = document.getElementById('searchInput');
+            currentFilters.search = searchInput.value.toLowerCase();
+            applyFilters();
+        }
+
+        // Apply all filters
+        function applyFilters() {
+            let filtered = recipesDatabase;
+
+            // Search filter
+            if (currentFilters.search) {
+                filtered = filtered.filter(recipe =>
+                    recipe.name.includes(currentFilters.search) ||
+                    recipe.ingredients.some(ing => ing.item.includes(currentFilters.search))
+                );
+            }
+
+            // Difficulty filter
+            if (currentFilters.difficulty) {
+                filtered = filtered.filter(recipe => recipe.difficulty === currentFilters.difficulty);
+            }
+
+            // Tags filter
+            if (currentFilters.tags.length > 0) {
+                filtered = filtered.filter(recipe =>
+                    currentFilters.tags.some(tag => recipe.tags.includes(tag))
+                );
+            }
+
+            displayRecipes(filtered);
+            document.getElementById('foundRecipes').textContent = filtered.length;
+        }
+
+        // Display recipes
+        function displayRecipes(recipes) {
+            const container = document.getElementById('recipesList');
+            if (recipes.length === 0) {
+                container.innerHTML = '<div class="no-selection">لم يتم العثور على وصفات</div>';
+                return;
+            }
+
+            container.innerHTML = recipes.map(recipe => `
+                <div class="recipe-item" onclick="showRecipeDetails(${recipe.id})">
+                    <div class="recipe-name">${recipe.name}</div>
+                    <div class="recipe-meta">
+                        <span class="meta-item">⏱️ ${recipe.time_minutes} دقيقة</span>
+                        <span class="meta-item">🌡️ ${recipe.temperature}°</span>
+                        <span class="meta-item">
+                            <span class="difficulty-${recipe.difficulty}">
+                                ${getDifficultyLabel(recipe.difficulty)}
+                            </span>
+                        </span>
+                    </div>
+                    <div class="tags">
+                        ${recipe.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Get difficulty label
+        function getDifficultyLabel(difficulty) {
+            const labels = { easy: 'سهل', medium: 'متوسط', hard: 'صعب' };
+            return labels[difficulty] || difficulty;
+        }
+
+        // Show recipe details
+        function showRecipeDetails(recipeId) {
+            const recipe = recipesDatabase.find(r => r.id === recipeId);
+            if (!recipe) return;
+
+            document.getElementById('chatPanel').style.display = 'none';
+            document.getElementById('detailsPanel').style.display = 'block';
+
+            const content = document.getElementById('recipeDetailsContent');
+            content.innerHTML = `
+                <div class="detail-section">
+                    <h3>${recipe.name}</h3>
+                    <div class="recipe-meta">
+                        <span class="meta-item">⏱️ الوقت: ${recipe.time_minutes} دقيقة</span>
+                        <span class="meta-item">🌡️ الحرارة: ${recipe.temperature}°</span>
+                        <span class="meta-item difficulty-${recipe.difficulty}">📊 ${getDifficultyLabel(recipe.difficulty)}</span>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>🛒 المكونات</h3>
+                    <ul class="ingredients-list">
+                        ${recipe.ingredients.map(ing => `
+                            <li>
+                                <span class="ingredient-name">${ing.item}</span>
+                                <span class="ingredient-amount">${ing.amount} ${ing.unit}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h3>👨‍🍳 خطوات التحضير</h3>
+                    <ol class="steps-list">
+                        ${recipe.steps.map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                </div>
+
+                <button onclick="document.getElementById('chatPanel').style.display='block'; document.getElementById('detailsPanel').style.display='none';" style="width: 100%; margin-top: 20px;">
+                    العودة للدردشة
+                </button>
+            `;
+        }
+
+        // Chat functionality
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if (!message) return;
+
+            // Display user message
+            addMessageToChat(message, 'user');
+            input.value = '';
+
+            // Generate bot response
+            const response = generateBotResponse(message);
+            setTimeout(() => {
+                addMessageToChat(response, 'bot');
+            }, 500);
+        }
+
+        // Add message to chat
+        function addMessageToChat(message, sender) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            messageDiv.textContent = message;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Generate bot response
+        function generateBotResponse(userMessage) {
+            const msg = userMessage.toLowerCase();
+
+            // Greetings
+            if (['مرحبا', 'السلام عليكم', 'هلا', 'هي', 'احتاج مساعدة', 'اهلا'].some(greeting => msg.includes(greeting))) {
+                return 'مرحباً بك! 👋\nأنا هنا لمساعدتك في البحث عن الوصفات. يمكنك أن تسأل عن أي وصفة أو مكون أو نوع طعام.';
+            }
+
+            // Not food related
+            if (['رياضة', 'سياسة', 'أخبار', 'عالم', 'تكنولوجيا', 'برمجة', 'حب', 'موسيقى', 'أفلام', 'لعبة'].some(word => msg.includes(word))) {
+                return 'آسف! 🙏\nأنا متخصص فقط في موضوعات الطبخ والغذاء. يمكنني مساعدتك في البحث عن الوصفات والمكونات فقط.\n\nهل تريد مساعدة في شيء متعلق بالطبخ؟';
+            }
+
+            // Search for recipes
+            const searchResults = recipesDatabase.filter(recipe =>
+                recipe.name.includes(msg) ||
+                recipe.ingredients.some(ing => ing.item.includes(msg)) ||
+                recipe.tags.some(tag => tag.includes(msg))
+            );
+
+            if (searchResults.length > 0) {
+                return `وجدت ${searchResults.length} وصفة:\n\n${
+                    searchResults.slice(0, 5).map((r, i) => 
+                        `${i + 1}. ${r.name} (${getDifficultyLabel(r.difficulty)})`
+                    ).join('\n')
+                }${searchResults.length > 5 ? `\n\n... وعدد آخر` : ''}`;
+            }
+
+            // Default response
+            return 'لم أجد وصفات مطابقة. 🔍\n\nيمكنك:\n• البحث عن اسم وصفة\n• البحث عن نوع مكون\n• اختيار من قائمة الفلاتر الموجودة\n\nمثال: "ابحث عن مكرونة"';
+        }
+
+        // Update stats
+        function updateStats() {
+            document.getElementById('totalRecipes').textContent = recipesDatabase.length;
+            document.getElementById('foundRecipes').textContent = recipesDatabase.length;
+        }
+
+        // Initialize
+        loadDatabase();
+    </script>
+</body>
+</html>

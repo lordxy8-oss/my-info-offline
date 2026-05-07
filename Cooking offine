@@ -452,11 +452,7 @@
 "time_minutes": 25,
 "temperature": 170,
 "difficulty": "easy"
-}
-]
-}
-{
-"recipes": [
+}.
 {
 "id": 26,
 "name": "شوربة عدس",
@@ -793,12 +789,7 @@
 "time_minutes": 25,
 "temperature": 180,
 "difficulty": "medium"
-}
-]
-}
-
-{
-"recipes": [
+}.
 {
 "id": 51,
 "name": "شوربة خضار",
@@ -1085,7 +1076,6 @@
     "keywords": "كفتة",
     "tags": ["protein"]
   },
-
   {
     "id": 76,
     "name": "أرز أبيض",
